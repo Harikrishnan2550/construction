@@ -28,13 +28,13 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto flex items-center justify-between px-6 sm:px-10 py-4">
 
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-3 group">
+          <a href="#home" className="flex items-center gap-3 group ">
             <Image
               src="/logo/logo.png"
               alt="PR Constructions Logo"
               width={150}
               height={120}
-              className="w-36 md:w-40 h-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              className="w-36 md:w-40 h-auto object-contain transition-transform duration-300 group-hover:scale-105 mr-0 lg:mr-32"
               priority
             />
           </a>

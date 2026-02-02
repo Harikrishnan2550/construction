@@ -23,9 +23,9 @@ export default function Hero() {
       <div className="mt-16 flex justify-center">
         <div className="w-full max-w-[1100px] rounded-t-[2.5rem] overflow-hidden shadow-2xl">
           <img
-            src="/banner2.png"
+            src="/banner5.png"
             alt="Premium Kerala residence – PR Constructions"
-            className="w-full h-[500px] object-cover"
+            className="w-full h-[550px] object-cover"
           />
         </div>
       </div>

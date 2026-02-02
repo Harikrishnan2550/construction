@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArrowRight, MapPin, Phone, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -26,30 +27,48 @@ export default function Footer() {
 
         {/* Services Links */}
         <div>
-          <h4 className="text-lg font-semibold mb-4 text-[#7CE8C5]">
+          <h4 className="text-lg font-semibold mb-4 text-[#c9a961]">
             Our Services
           </h4>
           <ul className="space-y-2 text-gray-200 text-sm">
-            <li>Building Planning</li>
-            <li>Residential & Commercial Construction</li>
-            <li>Renovation & Remodeling</li>
-            <li>Interior Design & Work</li>
-            <li>Supervision & Estimation</li>
-            <li>Consultation</li>
+            {[
+              "Building Planning",
+              "Residential & Commercial Construction",
+              "Renovation & Remodeling",
+              "Interior Design & Work",
+              "Supervision & Estimation",
+              "Consultation",
+            ].map((service, index) => (
+              <li key={index} className="flex items-center gap-2 hover:text-white transition">
+                <ArrowRight size={16} className="text-[#c9a961]" />
+                {service}
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Contact Info */}
         <div>
-          <h4 className="text-lg font-semibold mb-4 text-[#7CE8C5]">
+          <h4 className="text-lg font-semibold mb-4 text-[#c9a961]">
             Contact Info
           </h4>
-          <ul className="space-y-3 text-gray-200 text-sm">
-            <li>📞 +91 98476 66191</li>
-            <li>📧 hello@prconstructions.in</li>
-            <li>
-              📍 Thalassery, Nadapuram Road,<br />
-              Kannur, Kerala, India
+          <ul className="space-y-4 text-gray-200 text-sm">
+            <li className="flex items-start gap-3">
+              <Phone size={18} className="text-[#c9a961] mt-1" />
+              <span>+91 98476 66191</span>
+            </li>
+
+            <li className="flex items-start gap-3">
+              <Mail size={18} className="text-[#c9a961] mt-1" />
+              <span>info@prconstructions.in</span>
+            </li>
+
+            <li className="flex items-start gap-3">
+              <MapPin size={18} className="text-[#c9a961] mt-1" />
+              <span>
+                Thalassery, Nadapuram Road,<br />
+                Kannur, Kerala, India
+              </span>
             </li>
           </ul>
         </div>
@@ -57,12 +76,11 @@ export default function Footer() {
 
       {/* Bottom Line */}
       <div className="text-center text-gray-300 text-sm mt-12 border-t border-amber-800 pt-6">
-        © {new Date().getFullYear()} PR Constructions. All rights reserved.  
-        <span className="block mt-2 text-gray-400">
+        © {new Date().getFullYear()} PR Constructions. All rights reserved.
+        <span className="block mt-2 text-gray-300">
           Developed by Winshine Infotech
         </span>
       </div>
     </footer>
   );
 }
- 
